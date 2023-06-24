@@ -1,12 +1,10 @@
 /* Montseratt font: 400, 400 italic, 500, 600*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&display=swap');
 
-
-
 /* variables  */
 :root {
 	--text-color: #061318;
-	--background: #e7f4f9;
+	--background-color: #e7f4f9;
 	--primary-button: #3ba4ce;
 	--secondary-button: #f3f9fc;
 	--accent-color: #50aed3;
@@ -77,6 +75,8 @@ ol {
 
 /* global styles */
 
-body{
-  color: var(--text-color)
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: var(--background-color);
+	color: var(--text-color);
 }
