@@ -1,7 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+const favorites = JSON.parse(localStorage.getItem('favorites')) || []
+
 const initialState = {
-	entities: [],
+	entities: favorites,
 }
 
 const favoritesSlice = createSlice({
@@ -10,11 +12,18 @@ const favoritesSlice = createSlice({
 	reducers: {
 		favoriteAdded(state, action) {
 			state.entities.push(action.payload)
+			localStorage.setItem('favorites', JSON.stringify(state.entities))
 		},
 		favoriteDeleted(state, action) {
 			state.entities = state.entities.filter(
-				member => member.id !== action.payload
+				member => member.id !== action.payload.id
 			)
+
+			if (state.entities.length > 0) {
+				localStorage.setItem('favorites', JSON.stringify(state.entities))
+			} else {
+				localStorage.removeItem('favorites')
+			}
 		},
 	},
 })
@@ -26,8 +35,8 @@ export const addFavorite = memberPayload => dispatch => {
 	dispatch(favoriteAdded(memberPayload))
 }
 
-export const deleteFavorite = memberId => dispatch => {
-	dispatch(favoriteDeleted(memberId))
+export const deleteFavorite = memberPayload => dispatch => {
+	dispatch(favoriteDeleted(memberPayload))
 }
 
 export default favoritesReducer

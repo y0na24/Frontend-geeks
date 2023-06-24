@@ -1,7 +1,7 @@
-import './index.css'
+import TeamMember from './layouts/teamMember'
 
 function App() {
-	return <h1>App</h1>
+	return <TeamMember />
 }
 
 export default App
