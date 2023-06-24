@@ -30,7 +30,9 @@ const Slider = ({ children, width=700 }) => {
     }
     return (
         <div className="slider-main" style={{width: width}}>
-            <div className="slider-leftBtn" onClick={handleLeftClick}>{"<"}</div>
+            <div className="slider-leftShadow">
+                <div className="slider-leftBtn" onClick={handleLeftClick}>{"<"}</div>
+            </div>
                 <div className="slider-window">
                     <div
                         className="slider-items"
@@ -41,12 +43,14 @@ const Slider = ({ children, width=700 }) => {
                         {editedChildren}
                     </div>
                 </div>
-            <div className="slider-rigthBtn" onClick={handleRigthClick}>{">"}</div>
-            <div className="slider-dots">
+            <div className="slider-rightShadow">
+                <div className="slider-rigthBtn" onClick={handleRigthClick}>{">"}</div>
+            </div>
+            {/* <div className="slider-dots">
                 {children.map(( el, ind )=>(
                     <div key={ind}></div>
                 ))}
-            </div>
+            </div> */}
         </div>
     );
 };
