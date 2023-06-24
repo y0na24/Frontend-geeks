@@ -1,0 +1,103 @@
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 0 15px;
+	padding-top: 50px;
+}
+
+.card {
+	background-color: var(--accent-color);
+	width: 100%;
+	min-height: 900px;
+	border-radius: 5px;
+	padding: 20px 40px;
+}
+
+.profile {
+	display: flex;
+	justify-content: center;
+	gap: 50px;
+	margin-bottom: 40px;
+}
+
+.avatar {
+	max-width: 300px;
+	max-height: 300px;
+	border-radius: 8px;
+	/* object-fit: contain; */
+	object-fit: scale-down;
+}
+
+.info-block {
+	display: flex;
+	flex-direction: column;
+	padding-top: 50px;
+}
+
+.name,
+.age {
+	display: block;
+}
+
+.name {
+	font-size: 32px;
+	font-weight: 500;
+}
+
+.age {
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+.description-block {
+	max-width: 800px;
+	margin: 0 auto;
+	background-color: var(--secondary-button);
+	padding: 20px;
+	padding-bottom: 40px;
+	border-radius: 2px;
+	margin-bottom: 40px;
+}
+
+.qualities,
+.description-text {
+	font-size: 20px;
+}
+
+.card-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.github {
+	display: inline-block;
+}
+
+
+@media (max-width: 750px) {
+	.name {
+		font-size: 26px;
+	}
+	.profile {
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+	}
+
+	.info-block {
+		align-items: center;
+		padding: 0;
+	}
+
+	.qualities {
+		text-align: center;
+	}
+
+	.description-text {
+		font-size: 18px;
+	}
+}
