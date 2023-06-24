@@ -1,10 +1,10 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 
 const TeamMemberPage = props => {
 	return <div>TeamMemberPage</div>
 }
 
-TeamMemberPage.propTypes = {}
+// TeamMemberPage.propTypes = {}
 
 export default TeamMemberPage

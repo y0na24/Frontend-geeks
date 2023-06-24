@@ -1,10 +1,10 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 
 const FavoritesPage = props => {
 	return <div>FavoritesPage</div>
 }
 
-FavoritesPage.propTypes = {}
+// FavoritesPage.propTypes = {}
 
 export default FavoritesPage
