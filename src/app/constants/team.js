@@ -33,6 +33,17 @@ const team = [
 		github: 'https://github.com/asyakz',
 		tasksDone: 'Название и описание команды, роутинг приложения',
 	},
+	{
+		id: 4,
+		name: 'Антонов Николай',
+		age: 26,
+		photo: '../assets/nikolay.jpeg',
+		description:
+			'Целиком и полностью полагаюсь на жизненное кредо, которое гласит: Поставил цель - добился',
+		qualities: ['Веселый', 'Дерзкий', 'Уверенный'],
+		github: 'https://github.com/Anti6ot',
+		tasksDone: 'Навигационное меню, карточка участника и интро',
+	},
 ]
 
 export default team
