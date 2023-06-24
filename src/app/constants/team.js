@@ -8,7 +8,7 @@ const team = [
 		photo: '../assets/yura.jpg',
 		qualities: ['Целеустремлённость', 'Креативность'],
 		github: 'https://github.com/yucheg2',
-		thingsDone: "Сделал слайдер и страницу 'Избранное'",
+		tasksDone: "Сделал слайдер и страницу 'Избранное'",
 	},
 	{
 		id: 2,
@@ -19,7 +19,7 @@ const team = [
 		photo: '../assets/matvey.jpg',
 		qualities: ['Дисциплинированность', 'Коммуникабельность'],
 		github: 'https://github.com/y0na24',
-		thingsDone:
+		tasksDone:
 			'Сделал работу с Redux Toolkit, страницу участника и breadCrumbs',
 	},
 	{
@@ -30,8 +30,19 @@ const team = [
 		descr:
 			'Люблю учиться новому, ставить недостижимые цели и медленно, но упорно, шаг за шагом, достигать их',
 		qualities: ['Усидчивость', 'Обучаемость', 'Целеустремленность'],
-		social: 'https://github.com/asyakz',
-		thingsDone: 'Название и описание команды, роутинг приложения',
+		github: 'https://github.com/asyakz',
+		tasksDone: 'Название и описание команды, роутинг приложения',
+	},
+	{
+		id: 4,
+		name: 'Антонов Николай',
+		age: 26,
+		photo: '../assets/nikolay.jpeg',
+		description:
+			'Целиком и полностью полагаюсь на жизненное кредо, которое гласит: Поставил цель - добился',
+		qualities: ['Веселый', 'Дерзкий', 'Уверенный'],
+		github: 'https://github.com/Anti6ot',
+		tasksDone: 'Навигационное меню, карточка участника и интро',
 	},
 ]
 
