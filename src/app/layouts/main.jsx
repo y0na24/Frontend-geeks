@@ -1,12 +1,16 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-
 import MainPage from '../components/pages/mainPage'
+import Cards from '../components/cards/cards'
 
 const Main = props => {
-	return <MainPage />
+	return (
+		<>
+			<Cards />
+			<MainPage />
+		</>
+	)
 }
 
-Main.propTypes = {}
+// Main.propTypes = {}
 
 export default Main
