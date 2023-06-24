@@ -1,12 +1,15 @@
 .slider-main {
-    display: flex;
+    height: 100%;
+    position: relative;
+
 }
 
 .slider-window {
-    display: flex;
     height: 100%;
     width: 100%;
     overflow: hidden;
+
+    border-radius: 15px;
 }
 
 .slider-items {
@@ -17,4 +20,33 @@
     transition: translate;
     transition-property: transform;
     transition-duration: 0.6s;
+}
+
+.slider-leftBtn {
+    user-select: none;
+
+    left: 10px;
+    font-size: 35px;
+    color:var(--background);
+
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 1;
+    cursor: pointer;
+}
+
+
+.slider-rigthBtn {
+    user-select: none;
+
+    right: 10px;
+    font-size: 35px;
+    color:var(--background);
+
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 1;
+    cursor: pointer;
 }

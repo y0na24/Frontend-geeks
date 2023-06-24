@@ -1,13 +1,13 @@
-import React, { cloneElement, useEffect, useState } from "react"
+import React, { cloneElement, useState } from "react"
 import PropTypes from "prop-types"
 import "./index.css"
 
-const Slider = ({ children }) => {
-    const width = 700
+const Slider = ({ children, width=700 }) => {
     const [pageNumber, setPage] = useState(1)
     const editedChildren = React.Children.map(children, function(children) {
         return cloneElement(children, {
             style:{
+                ...children.props.style,
                 height: "100%",
                 minWidth: `${width}px`,
                 maxWidth: `${width}px`
@@ -15,14 +15,22 @@ const Slider = ({ children }) => {
         })
     })
     const handleLeftClick = () => {
-        setPage(p=>p-1)
+        if (pageNumber === 1) {
+            setPage(children.length)
+        } else {
+            setPage(p=>p-1)
+        }
     }
     const handleRigthClick = () => {
-        setPage(p=>p+1)
+        if (children.length === pageNumber) {
+            setPage(1)
+        } else {
+            setPage(p=>p+1)
+        }
     }
     return (
         <div className="slider-main" style={{width: width}}>
-            <button disabled={pageNumber === 1} onClick={handleLeftClick}>{"<"}</button>
+            <div className="slider-leftBtn" onClick={handleLeftClick}>{"<"}</div>
                 <div className="slider-window">
                     <div
                         className="slider-items"
@@ -33,7 +41,12 @@ const Slider = ({ children }) => {
                         {editedChildren}
                     </div>
                 </div>
-            <button disabled={pageNumber === children.length} onClick={handleRigthClick}>{">"}</button>
+            <div className="slider-rigthBtn" onClick={handleRigthClick}>{">"}</div>
+            <div className="slider-dots">
+                {children.map(( el, ind )=>(
+                    <div key={ind}></div>
+                ))}
+            </div>
         </div>
     );
 };
@@ -41,5 +54,6 @@ const Slider = ({ children }) => {
 export default Slider
 
 Slider.propTypes = {
+    width: PropTypes.number,
     children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
 }
