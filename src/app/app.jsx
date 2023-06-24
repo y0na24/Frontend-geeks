@@ -1,26 +1,19 @@
-
-import Slider from "./components/slider/slider"
+import Slider from './components/slider/slider'
 import TeamMember from './layouts/teamMember'
-import img1 from "./assets/asya.jpeg"
-import img2 from "./assets/matvey.jpg"
-import img3 from "./assets/nikolay.jpeg"
-import img4 from "./assets/yura.jpg"
-
-
+import { matvey, yura, nikolay, asya } from './assets'
 
 function App() {
-	return (<>
-	<TeamMember />
-	<Slider>
-		<img src={img1} alt="" />
-		<img src={img2} alt="" />
-		<img src={img3} alt="" />
-		<img src={img4} alt="" />
-	</Slider>
-	</>)
-
-
-
-
+	return (
+		<>
+			<TeamMember />
+			<Slider>
+				<img src={matvey} alt='Матвей' />
+				<img src={yura} alt='Юрий' />
+				<img src={asya} alt='Анастасия' />
+				<img src={nikolay} alt='Николай' />
+			</Slider>
+		</>
+	)
+}
 
 export default App
