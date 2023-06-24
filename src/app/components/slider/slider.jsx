@@ -7,7 +7,6 @@ const Slider = ({ children, width = 700 }) => {
 	const editedChildren = React.Children.map(children, function (children) {
 		return cloneElement(children, {
 			style: {
-				...children.props.style,
 				height: '100%',
 				minWidth: `${width}px`,
 				maxWidth: `${width}px`,

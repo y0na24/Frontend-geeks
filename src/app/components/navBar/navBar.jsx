@@ -6,8 +6,8 @@ const NavBar = () => {
 			<nav>
 				<ul className='nav_links'>
 					<li>
-						<Link className='link' to='/TeamMember'>
-							TeamMember
+						<Link className='link' to='/'>
+							Home
 						</Link>
 					</li>
 					<li>
@@ -16,8 +16,8 @@ const NavBar = () => {
 						</Link>
 					</li>
 					<li>
-						<Link className='link' to='/'>
-							Home
+						<Link className='link' to='/TeamMember'>
+							TeamMember
 						</Link>
 					</li>
 				</ul>

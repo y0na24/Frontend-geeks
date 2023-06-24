@@ -1,11 +1,10 @@
 import React from 'react'
-import './index.css'
-import '../../assets/nikolay.jpeg'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
-const Card = ({ name, image, qual }) => {
-	let startKey = 0
+import './index.css'
+
+const Card = ({ name, image, qual, id }) => {
 	return (
 		<div id='card'>
 			<div className='personal'>
@@ -19,11 +18,11 @@ const Card = ({ name, image, qual }) => {
 
 				<div className='info'>
 					<div className='skills'>
-						{qual.map(elem => {
-							return <span key={startKey++}>{elem}</span>
+						{qual.map((elem, i) => {
+							return <span key={i}>{elem}</span>
 						})}
 					</div>
-					<Link to='userPageId' className='randomizeButton'>
+					<Link to={`/teamMember/${id}` } className='randomizeButton'>
 						Перейти
 					</Link>
 				</div>

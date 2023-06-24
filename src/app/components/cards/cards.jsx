@@ -6,9 +6,7 @@ const Cards = () => {
 	const users = team
 	return (
 		<>
-			{users.map(el => (
-				<Card key={el.id} name={el.name} image={el.photo} qual={el.qualities} />
-			))}
+		
 		</>
 	)
 }
