@@ -1,19 +1,19 @@
 import React from 'react'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 import Card from './card'
 
-const Cards = ({cards}) => {
+const Cards = ({ cards }) => {
 	return (
 		<div className='cardsList-container'>
 			{cards.map(user => (
-				<div className='cardsList-item'>
-				    <Card
-					    key={user.id}
-					    name={user.name}
-					    image={user.photo}
-					    qual={user.qualities}
-					    id={user.id}
-				    />
+				<div key={user.id} className='cardsList-item'>
+					<Card
+						key={user.id}
+						name={user.name}
+						image={user.photo}
+						qual={user.qualities}
+						id={user.id}
+					/>
 				</div>
 			))}
 		</div>
@@ -21,7 +21,7 @@ const Cards = ({cards}) => {
 }
 
 Cards.propTypes = {
-	cards: PropTypes.array.isRequired
+	cards: PropTypes.array.isRequired,
 }
 
 export default Cards

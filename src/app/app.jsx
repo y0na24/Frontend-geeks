@@ -4,7 +4,6 @@ import routes from './routes'
 
 function App() {
 	const elements = useRoutes(routes)
-
 	return elements
 }
 
