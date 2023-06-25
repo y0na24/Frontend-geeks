@@ -1,5 +1,6 @@
 import React from 'react'
-import './intro.css'
+import './index.css'
+
 const IntroText = () => {
 	return (
 		<section className='cd-intro'>
@@ -13,7 +14,7 @@ const IntroText = () => {
 					<p className='cd-btn'>
 						Мы готовы без сна и отдыха часами сидеть за проектом, чтобы добиться результата!
 					</p>
-					<p>(Кликни на текст, чтобы продолжить)</p>
+					<p><strong>(Кликни на текст, чтобы продолжить)</strong></p>
 				</div>
 			</div>
 		</section>

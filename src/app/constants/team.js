@@ -12,9 +12,9 @@ const team = [
 		github: 'https://github.com/yucheg2',
 		tasksDone: ['Слайдер', 'Cтраница избранных', 'Badge'],
 		skills: [
-			{ name: 'HTML', percent: 50 },
-			{ name: 'CSS', percent: 70 },
-			{ name: 'JavaScript', percent: 40 },
+			{ name: 'HTML', percent: 70 },
+			{ name: 'CSS', percent: 80 },
+			{ name: 'JavaScript', percent: 60 },
 		],
 	},
 	{
@@ -33,9 +33,9 @@ const team = [
 			'Дизайн проекта',
 		],
 		skills: [
-			{ name: 'HTML', percent: 50 },
-			{ name: 'CSS', percent: 70 },
-			{ name: 'JavaScript', percent: 40 },
+			{ name: 'HTML', percent: 70 },
+			{ name: 'CSS', percent: 80 },
+			{ name: 'JavaScript', percent: 60 },
 		],
 	},
 	{
@@ -49,9 +49,9 @@ const team = [
 		github: 'https://github.com/asyakz',
 		tasksDone: ['Роутинг', 'Название и описание команды', 'ProgressBar'],
 		skills: [
-			{ name: 'HTML', percent: 50 },
-			{ name: 'CSS', percent: 70 },
-			{ name: 'JavaScript', percent: 40 },
+			{ name: 'HTML', percent: 70 },
+			{ name: 'CSS', percent: 80 },
+			{ name: 'JavaScript', percent: 60 },
 		],
 	},
 	{
@@ -65,9 +65,9 @@ const team = [
 		github: 'https://github.com/Anti6ot',
 		tasksDone: ['Навигационное меню', 'Карточка участника', 'Интро'],
 		skills: [
-			{ name: 'HTML', percent: 50 },
-			{ name: 'CSS', percent: 70 },
-			{ name: 'JavaScript', percent: 40 },
+			{ name: 'HTML', percent: 70 },
+			{ name: 'CSS', percent: 80 },
+			{ name: 'JavaScript', percent: 60 },
 		],
 	},
 ]
