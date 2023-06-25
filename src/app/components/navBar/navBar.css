@@ -2,7 +2,8 @@
 	background-color: var(--secondary-color);
 	font-weight: 500;
 	color: #fff;
-	margin-bottom: 50px;
+
+	margin-bottom: 10px;
 	text-transform: uppercase;
 }
 .nav {

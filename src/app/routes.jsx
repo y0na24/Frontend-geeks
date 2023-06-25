@@ -4,7 +4,7 @@ import Main from './layouts/main'
 import Favorites from './layouts/favorites'
 import TeamMemberPage from './components/pages/teamMemberPage'
 import TeamMember from './layouts/teamMember'
-import Layout from './components/Layout'
+import Layout from './components/layout'
 
 const routes = [
 	{

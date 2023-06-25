@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Tasks = ({ tasks }) => {
-	return tasks.map(task => (
-		<li className='card-task'>
+	return tasks.map((task, i) => (
+		<li key={i} className='card-task'>
 			<span>{task}</span>
 		</li>
 	))
