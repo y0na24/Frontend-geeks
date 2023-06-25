@@ -11,9 +11,11 @@ import team from '../../../constants/team'
 import { github } from '../../../assets'
 
 import './index.css'
-import { useParams } from 'react-router-dom'
+import { Navigate, useParams } from 'react-router-dom'
 import Badges from '../../ui/badge/badges'
 import ProgressBar from '../../progressBar/progressBar'
+import ProgressBarList from '../../progressBar/progressBarList'
+import Tasks from '../../tasks/tasks'
 
 const TeamMemberPage = () => {
 	const dispatch = useDispatch()
@@ -48,6 +50,10 @@ const TeamMemberPage = () => {
 		dispatch(deleteFavorite(memberById))
 	}
 
+	if (!memberById) {
+		return <Navigate to='/' />
+	}
+
 	return (
 		<div className='container'>
 			<div className='card'>
@@ -63,18 +69,12 @@ const TeamMemberPage = () => {
 					<p className='card-description'>{memberById.description}</p>
 
 					<div className='card-progress'>
-						{memberById.skills.map(skill => (
-							<ProgressBar name={skill.name} percent={skill.percent} />
-						))}
+						<ProgressBarList skills={memberById.skills} />
 					</div>
 					<div className='card-thingsDone'>
 						<h3 className='card-thingsDone-title'>Что было сделано:</h3>
 						<ul className='card-thingsDone-list'>
-							{memberById.tasksDone.map(task => (
-								<li className='card-task'>
-									<span>{task}</span>
-								</li>
-							))}
+							<Tasks tasks={memberById.tasksDone} />
 						</ul>
 					</div>
 				</div>
