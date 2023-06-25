@@ -1,6 +1,5 @@
 #card {
 	font-family: 'Segoe UI';
-	margin: 12vh auto;
 	border-radius: 5px;
 	overflow: hidden;
 	width: 100%;
@@ -58,7 +57,7 @@
 	padding: 0 12px;
 	border-radius: 25px;
 	background-color: #64bc7f;
-	margin: 100px 50px 0px 50px;
+	/* margin: 100px 50px 0px 50px; */
 }
 
 #card .randomizeButton {
@@ -78,6 +77,10 @@
 
 #card .randomizeButton:hover {
 	background-color: #57aa70;
+}
+
+.cardsList-item {
+	margin-bottom: 30px;
 }
 
 .animate-change {

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
 import './index.css'
+import Badges from '../ui/badge/badges'
 
 const Card = ({ name, image, qual, id, style }) => {
 	return (
@@ -17,11 +18,7 @@ const Card = ({ name, image, qual, id, style }) => {
 						<h1>{name}</h1>
 						<h2>Frontend developer</h2>
 					</div>
-					<div className='skills'>
-						{qual.map((elem, i) => {
-							return <span key={i}>{elem}</span>
-						})}
-					</div>
+					<Badges arr={qual}/>
 				</div>
 			</div>
 			<Link to={`/teamMember/${id}`} className='randomizeButton'>

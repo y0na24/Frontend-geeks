@@ -5,7 +5,7 @@ import team from '../../../constants/team'
 
 const MainPage = () => {
 	return (
-		<>
+		<div className='container'>
 			<Slider width={800}>
 				{team.map(user => (
 					<Card
@@ -17,7 +17,7 @@ const MainPage = () => {
 					/>
 				))}
 			</Slider>
-		</>
+		</div>
 	)
 }
 

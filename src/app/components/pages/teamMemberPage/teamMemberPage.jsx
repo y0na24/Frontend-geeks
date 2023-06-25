@@ -12,6 +12,7 @@ import { github } from '../../../assets'
 
 import './index.css'
 import { useParams } from 'react-router-dom'
+import Badges from '../../ui/badge/badges'
 
 const TeamMemberPage = () => {
 	const dispatch = useDispatch()
@@ -54,13 +55,7 @@ const TeamMemberPage = () => {
 					<div className='card-info'>
 						<span className='card-name'>{memberById.name}</span>
 						<span className='card-age'>{memberById.age} лет</span>
-						<ul className='card-qualities'>
-							{memberById.qualities.map((quality, i) => (
-								<li key={i} className='card-quality'>
-									{quality}
-								</li>
-							))}
-						</ul>
+						<Badges arr={memberById.qualities}/>
 					</div>
 				</div>
 				<div className='card-bottom'>

@@ -62,7 +62,7 @@
     width: 30%;
     position: absolute;
     right: 0;
-    box-shadow: -65px 0px 80px -50px #000000 inset;
+    box-shadow: -100px 0px 100px -100px #000000 inset;
 }
 
 .slider-leftShadow {
@@ -74,5 +74,5 @@
     width: 30%;
     position: absolute;
     left: 0;
-    box-shadow: 65px 0px 80px -50px #000000 inset;
+    box-shadow: 100px 0px 100px -100px #000000 inset;
 }

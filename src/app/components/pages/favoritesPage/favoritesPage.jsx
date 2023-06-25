@@ -1,10 +1,20 @@
 import React from 'react'
-// import PropTypes from 'prop-types'
+import { useSelector } from 'react-redux'
+import { favoritesListSelector } from '../../../store/favoritesSlice'
+import Cards from '../../cards/cards'
+import './index.css'
 
-const FavoritesPage = props => {
-	return <div>FavoritesPage</div>
+const FavoritesPage = () => {
+	const favorites = useSelector(favoritesListSelector())
+	return (
+	    <div className='container'>
+            {
+				favorites.length > 0
+                    ? <Cards cards={favorites}/>
+					: <h1 className='noFavoritesTxt'>У выс нет избранных</h1>
+			}
+		</div>)
 }
 
-// FavoritesPage.propTypes = {}
 
 export default FavoritesPage

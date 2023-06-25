@@ -49,11 +49,6 @@ const Slider = ({ children, width = 700 }) => {
 					{'>'}
 				</div>
 			</div>
-			{/* <div className="slider-dots">
-                {children.map(( el, ind )=>(
-                    <div key={ind}></div>
-                ))}
-            </div> */}
 		</div>
 	)
 }

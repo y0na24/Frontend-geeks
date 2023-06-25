@@ -39,4 +39,8 @@ export const deleteFavorite = memberPayload => dispatch => {
 	dispatch(favoriteDeleted(memberPayload))
 }
 
+//selector
+
+export const favoritesListSelector = () => (state) => state.entities
+
 export default favoritesReducer
