@@ -1,17 +1,10 @@
 import React from 'react'
-import { NavLink, useLocation } from 'react-router-dom'
-
-import getRandomNumber from '../../utils/getRandomNumber'
+import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom'
 
 import './navBar.css'
 
-const NavBar = () => {
-	const [randomNumber, setRandomNumber] = React.useState()
-	const location = useLocation()
-
-	React.useEffect(() => {
-		setRandomNumber(getRandomNumber())
-	}, [location])
+const NavBar = ({handleShow}) => {
 
 	return (
 		<header className='header'>
@@ -27,9 +20,19 @@ const NavBar = () => {
 							Избранное
 						</NavLink>
 					</li>
+					<li>
+						<div className="navbar-info" onClick={handleShow}>
+							О команде
+						</div>
+					</li>
 				</ul>
 			</nav>
 		</header>
 	)
 }
+
+NavBar.propTypes = {
+	handleShow: PropTypes.func
+}
+
 export default NavBar

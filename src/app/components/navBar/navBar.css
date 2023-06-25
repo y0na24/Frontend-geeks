@@ -30,11 +30,12 @@
 .nav_links li:last-child {
 	right: 0;
 	top: 0;
-	/* margin-left: auto; */
+	margin-left: auto;
 }
 
 .nav_links {
 	display: flex;
+	align-items: center;
 }
 
 @media (max-width: 500px) {
@@ -56,4 +57,23 @@
 	.nav_links li:first-child {
 		margin: 0;
 	}
+}
+
+.navbar-info {
+	padding: 0 15px;
+	margin: 0 auto;
+	display: block;
+	background-color: var(--accent-color-2);
+	text-decoration: none;
+	text-align: center;
+	border-radius: 4px;
+	max-width: 400px;
+	line-height: 60px;
+	color: #fff;
+	font-weight: bold;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	transition: all 0.3s;
 }

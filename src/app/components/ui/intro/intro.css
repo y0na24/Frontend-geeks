@@ -30,6 +30,8 @@
   animation-delay: 0.4s;
 }
 .cd-intro{
+    margin-top: 300px;
+    cursor: pointer;
     text-align: center;
  }
 @keyframes cd-bounce-right {
