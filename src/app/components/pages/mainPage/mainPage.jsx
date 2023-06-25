@@ -1,5 +1,6 @@
 import React from 'react'
 import Slider from '../../slider/slider'
+import SliderItem from '../../slider/item'
 import Card from '../../cards/card'
 import team from '../../../constants/team'
 

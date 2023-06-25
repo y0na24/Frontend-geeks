@@ -25,7 +25,7 @@
 	transform: translateY(-2px);
 }
 
-.button.active {
+.button.active-btn {
 	background-color: var(--red-color);
 }
 

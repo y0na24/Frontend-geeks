@@ -30,7 +30,7 @@
 .nav_links li:last-child {
 	right: 0;
 	top: 0;
-	margin-left: auto;
+	/* margin-left: auto; */
 }
 
 .nav_links {

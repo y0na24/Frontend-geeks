@@ -27,11 +27,6 @@ const NavBar = () => {
 							Избранное
 						</NavLink>
 					</li>
-					<li>
-						<NavLink className='link' to={`/teamMember/${randomNumber}`}>
-							Участник команды
-						</NavLink>
-					</li>
 				</ul>
 			</nav>
 		</header>

@@ -19,12 +19,16 @@ const Slider = ({ children, width = 700 }) => {
 
 	useEffect(() => {
 		const resizeHandler = () => {
-			const _width = windowRef.current.offsetWidth
+			const _width = windowRef.current?.offsetWidth
 			setPageWidth(_width)
 			setPage(1)
 		}
 		resizeHandler()
 		window.addEventListener('resize', resizeHandler)
+
+		return () => {
+			window.removeEventListener('resize', resizeHandler)
+		}
 	}, [])
 
 	const handleRigthClick = () => {
