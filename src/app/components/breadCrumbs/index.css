@@ -3,11 +3,15 @@
 	margin-bottom: 50px;
 }
 .breadcrumb-not-active {
-	color: #000;
+	color: var(--background-color);
+}
+
+.breadcrumb-active {
+	color: var(--accent-color-2);
 }
 
 .breadcrumb-arrow {
 	margin-left: 10px;
 	margin-right: 10px;
-	color: #000;
+	color: var(--background-color);
 }

@@ -1,17 +1,26 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 
 import './index.css'
 
+import team from "../../constants/team"
+
 const BreadCrumbs = () => {
+	const {state, pathname} = useLocation()
+	const ind = pathname.slice(-1) - 1
+
+	const getContent = () => {
+		return state === "/" ? "Главная" : "Избранное"
+	}
+
 	return (
 		<nav className='breadcrumbs'>
-			<NavLink className='breadcrumb-not-active' to='/'>
-				Главная
-			</NavLink>
+			<Link className='breadcrumb-not-active' to={state}>
+				{getContent()}
+			</Link>
 			<span className='breadcrumb-arrow'>/</span>
-			<NavLink className='breadcrumb-not-active' to='/favorites'>
-				Избранное
+			<NavLink className='breadcrumb-active'>
+				{team[ind].name}
 			</NavLink>
 		</nav>
 	)

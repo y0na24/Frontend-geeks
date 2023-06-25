@@ -13,9 +13,9 @@ import { github } from '../../../assets'
 import './index.css'
 import { Navigate, useParams } from 'react-router-dom'
 import Badges from '../../ui/badge/badges'
-import ProgressBar from '../../progressBar/progressBar'
 import ProgressBarList from '../../progressBar/progressBarList'
 import Tasks from '../../tasks/tasks'
+import BreadCrumbs from '../../breadCrumbs/breadCrumbs'
 
 const TeamMemberPage = () => {
 	const dispatch = useDispatch()
@@ -57,6 +57,7 @@ const TeamMemberPage = () => {
 	return (
 		<div className='container'>
 			<div className='card'>
+			    <BreadCrumbs/>
 				<div className='card-top'>
 					<img className='card-avatar' src={memberById.photo} alt='Аватарка' />
 					<div className='card-info'>

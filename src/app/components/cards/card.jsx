@@ -1,11 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 import './index.css'
 import Badges from '../ui/badge/badges'
 
 const Card = ({ name, image, qual, id, style }) => {
+	const location = useLocation()
+
+	const navigate =useNavigate()
+
+	const clickHandler = () => {
+		navigate(`/teamMember/${id}`,{state:location.pathname})
+	}
 	return (
 		<div id='card' style={style}>
 			<div className='personal'>
@@ -21,9 +28,9 @@ const Card = ({ name, image, qual, id, style }) => {
 					<Badges arr={qual} />
 				</div>
 			</div>
-			<Link to={`/teamMember/${id}`} className='randomizeButton'>
+			<div onClick={clickHandler} className='randomizeButton'>
 				Перейти
-			</Link>
+			</div>
 		</div>
 	)
 }
