@@ -6,7 +6,7 @@ import Layout from './components/Layout'
 function App() {
 	const elements = useRoutes(routes)
 
-	return <Layout>{elements}</Layout>
+	return elements
 }
 
 export default App

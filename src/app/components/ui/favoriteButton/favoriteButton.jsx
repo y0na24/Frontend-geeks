@@ -7,7 +7,7 @@ const FavoriteButton = ({ isFavorite, label, onAdd, onDelete }) => {
 	const buttonStyles = !isFavorite ? 'button' : 'button active'
 
 	return (
-		<button className={buttonStyles} onClick={!isFavorite ? onAdd : onDelete}>
+		<button type='button' className={buttonStyles} onClick={!isFavorite ? onAdd : onDelete}>
 			{!isFavorite ? label : 'Удалить из избранного'}
 		</button>
 	)

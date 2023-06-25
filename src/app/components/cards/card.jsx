@@ -4,29 +4,29 @@ import { Link } from 'react-router-dom'
 
 import './index.css'
 
-const Card = ({ name, image, qual, id }) => {
+const Card = ({ name, image, qual, id, style }) => {
 	return (
-		<div id='card'>
+		<div id='card' style={style}>
 			<div className='personal'>
 				<div className='avatar'>
 					<img src={image} alt='user avatar' />
-					<div className='nameHolder'>
-						<h1>{name}</h1>
-						<h2>Backend developer</h2>
-					</div>
 				</div>
 
 				<div className='info'>
+					<div className='nameHolder'>
+						<h1>{name}</h1>
+						<h2>Frontend developer</h2>
+					</div>
 					<div className='skills'>
 						{qual.map((elem, i) => {
 							return <span key={i}>{elem}</span>
 						})}
 					</div>
-					<Link to={`/teamMember/${id}` } className='randomizeButton'>
-						Перейти
-					</Link>
 				</div>
 			</div>
+			<Link to={`/teamMember/${id}`} className='randomizeButton'>
+				Перейти
+			</Link>
 		</div>
 	)
 }

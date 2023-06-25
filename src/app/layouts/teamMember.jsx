@@ -1,9 +1,14 @@
 import React from 'react'
-
-import TeamMemberPage from '../components/pages/teamMemberPage'
+import { Navigate, Outlet, useParams } from 'react-router-dom'
 
 const TeamMember = props => {
-	return <TeamMemberPage />
+	const { memberId } = useParams()
+
+	if (memberId) {
+		return <Outlet />
+	}
+
+	return <Navigate to='/' />
 }
 
 TeamMember.propTypes = {}

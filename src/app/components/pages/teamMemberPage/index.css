@@ -1,104 +1,128 @@
 .container {
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	max-width: 900px;
 	margin: 0 auto;
+	max-width: 739px;
 	padding: 0 15px;
-	padding-top: 50px;
+	color: var(--text-color-2);
 }
 
 .card {
-	background-color: var(--accent-color);
-	width: 100%;
-	min-height: 900px;
-	border-radius: 5px;
-	padding: 20px 40px;
-	box-shadow: 0px 0px 10px #80808080;
+	background-color: var(--secondary-color);
+	padding: 32px;
+	border-radius: 16px;
 }
 
-.profile {
+.card-top {
 	display: flex;
-	justify-content: center;
-	gap: 50px;
-	margin-bottom: 40px;
+	align-items: center;
+	gap: 24px;
+	margin-bottom: 24px;
 }
 
-.avatar {
-	max-width: 300px;
-	max-height: 300px;
-	border-radius: 8px;
-	/* object-fit: contain; */
-	object-fit: scale-down;
+.card-avatar {
+	width: 170px;
+	height: 170px;
+	border-radius: 99px;
 }
 
-.info-block {
+.card-info {
 	display: flex;
 	flex-direction: column;
-	padding-top: 50px;
-	color: #fff;
+	justify-content: center;
 }
 
-.name,
-.age {
-	display: block;
+.card-name,
+.card-age {
+	display: inline-block;
 }
 
-.name {
-	font-size: 32px;
+.card-name {
+	font-weight: 600;
+	font-size: 48px;
+	line-height: 50px;
+}
+
+.card-age {
+	color: var(--grey-color);
 	font-weight: 500;
-}
-
-.age {
 	font-size: 24px;
-	margin-bottom: 20px;
+	margin-bottom: 16px;
+	padding-left: 3px;
 }
 
-.description-block {
-	max-width: 800px;
-	margin: 0 auto;
-	background-color: var(--secondary-button);
-	padding: 20px;
-	padding-bottom: 40px;
-	border-radius: 2px;
-	margin-bottom: 40px;
+.card-qualities {
+	display: flex;
+	align-items: center;
+	gap: 12px;
 }
 
-.qualities,
-.description-text {
-	font-size: 20px;
+.card-quality {
+	background-color: var(--accent-color-2);
+	padding: 12px 16px;
+	border-radius: 35px;
+	font-size: 16px;
+	font-weight: 500;
+	margin-right: 0;
+}
+
+.card-quality:last-child {
+	margin: 0;
+}
+
+.card-description {
+	font-weight: 500;
+	font-size: 18px;
+	margin-bottom: 24px;
 }
 
 .card-footer {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
+	justify-content: space-between;
 }
 
-.github {
-	display: inline-block;
-}
-
-@media (max-width: 750px) {
-	.name {
-		font-size: 26px;
-	}
-	.profile {
+@media (max-width: 735px) {
+	.card-top {
 		flex-direction: column;
-		align-items: center;
-		gap: 20px;
+		justify-content: center;
+		gap: 12px;
 	}
 
-	.info-block {
-		align-items: center;
-		padding: 0;
-	}
-
-	.qualities {
+	.card-name,
+	.card-age {
 		text-align: center;
 	}
 
-	.description-text {
-		font-size: 18px;
+	.card-name {
+		font-size: 36px;
+	}
+
+	.card-age {
+		font-size: 20px;
+	}
+
+	.card-quality {
+		font-size: 14px;
+		padding: 10px 14px;
+	}
+
+	.card-description {
+		font-size: 16px;
+		text-align: center;
+	}
+}
+
+@media (max-width: 500px) {
+	.card-qualities {
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+
+@media (max-width: 400px) {
+	.card-footer {
+		flex-direction: column;
+		gap: 15px;
 	}
 }

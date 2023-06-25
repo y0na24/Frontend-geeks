@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom'
 import './navBar.css'
 const NavBar = () => {
 	return (
-		<header>
-			<nav>
+		<header className='header'>
+			<nav className='nav'>
 				<ul className='nav_links'>
 					<li>
 						<Link className='link' to='/'>
@@ -17,7 +17,7 @@ const NavBar = () => {
 					</li>
 					<li>
 						<Link className='link' to='/TeamMember'>
-							TeamMember
+							Team Member
 						</Link>
 					</li>
 				</ul>

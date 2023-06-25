@@ -4,10 +4,15 @@
 /* variables  */
 :root {
 	--text-color: #061318;
-	--background-color: #e7f4f9;
+	--secondary-color: #343434;
+	--background-color: #fff;
 	--primary-button: #3ba4ce;
 	--secondary-button: #f3f9fc;
 	--accent-color: #50aed3;
+	--accent-color-2: #3e8bff;
+	--red-color: #e54444;
+	--text-color-2: #fff;
+	--grey-color: #797979;
 }
 
 /* reset css */
@@ -77,6 +82,6 @@ ol {
 
 body {
 	font-family: 'Montserrat', sans-serif;
-	background-color: var(--background-color);
-	color: var(--text-color);
+	background-color: var(--background-color-2);
+	color: var(--text-color-2);
 }

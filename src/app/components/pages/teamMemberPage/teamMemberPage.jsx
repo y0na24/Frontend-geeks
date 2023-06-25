@@ -11,9 +11,12 @@ import team from '../../../constants/team'
 import { github } from '../../../assets'
 
 import './index.css'
+import { useParams } from 'react-router-dom'
 
 const TeamMemberPage = () => {
 	const dispatch = useDispatch()
+
+	const { memberId } = useParams()
 
 	const [isFavorite, setIsFavorite] = React.useState(false)
 
@@ -21,13 +24,13 @@ const TeamMemberPage = () => {
 		setIsFavorite(isMemberInLocalStorage())
 	}, [])
 
-	const memberById = team.find(member => member.id === 2)
+	const memberById = team.find(member => member.id === Number(memberId))
 
 	function isMemberInLocalStorage() {
 		const arrayOfFavorites = JSON.parse(localStorage.getItem('favorites'))
 
 		if (arrayOfFavorites) {
-			return arrayOfFavorites.some(member => member.id === 2)
+			return arrayOfFavorites.some(member => member.id === Number(memberId))
 		}
 
 		return false
@@ -46,32 +49,34 @@ const TeamMemberPage = () => {
 	return (
 		<div className='container'>
 			<div className='card'>
-				<div className='profile'>
-					<img className='avatar' src={memberById.photo} alt='Аватарка' />
-					<div className='info-block'>
-						<span className='name'>Матвей Клёнов</span>
-						<span className='age'>20 лет</span>
-						<ul className='qualities'>
+				<div className='card-top'>
+					<img className='card-avatar' src={memberById.photo} alt='Аватарка' />
+					<div className='card-info'>
+						<span className='card-name'>{memberById.name}</span>
+						<span className='card-age'>{memberById.age} лет</span>
+						<ul className='card-qualities'>
 							{memberById.qualities.map((quality, i) => (
-								<li key={i}>{quality}</li>
+								<li key={i} className='card-quality'>
+									{quality}
+								</li>
 							))}
 						</ul>
 					</div>
 				</div>
-				<div className='description-block'>
-					<h2 className='description-title'>О Себе:</h2>
-					<p className='description-text'>{memberById.description}</p>
-				</div>
-				<div className='card-footer'>
-					<a className='github' href={memberById.github}>
-						<img src={github} alt='GitHub' />
-					</a>
-					<FavoriteButton
-						onAdd={addToFavorites}
-						onDelete={deleteFromFavorites}
-						isFavorite={isFavorite}
-						label='Добавить в избранное'
-					/>
+				<div className='card-bottom'>
+					<p className='card-description'>{memberById.description}</p>
+					<div className='card-footer'>
+						<a href={memberById.github}>
+							<img src={github} alt='Гитхаб' />
+						</a>
+
+						<FavoriteButton
+							onAdd={addToFavorites}
+							onDelete={deleteFromFavorites}
+							isFavorite={isFavorite}
+							label='Добавить в избранное'
+						/>
+					</div>
 				</div>
 			</div>
 		</div>
