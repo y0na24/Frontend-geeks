@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 import './index.css'
 
 const ProgressBar = ({ name, percent }) => {
@@ -19,6 +21,11 @@ const ProgressBar = ({ name, percent }) => {
 			</div>
 		</>
 	)
+}
+
+ProgressBar.propTypes = {
+	name: PropTypes.string.isRequired,
+	percent: PropTypes.number.isRequired,
 }
 
 export default ProgressBar

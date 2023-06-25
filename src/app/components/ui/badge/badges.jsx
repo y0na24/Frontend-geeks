@@ -6,7 +6,7 @@ const Badges = ({arr}) => {
     return (
     <ul className='card-qualities'>
         {arr.map((el,ind)=>{
-            return <Badge name={el} id={ind}/>
+            return <Badge name={el} key={ind}/>
         })}
     </ul>
 );

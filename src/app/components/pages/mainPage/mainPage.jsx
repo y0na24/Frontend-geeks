@@ -8,13 +8,14 @@ const MainPage = () => {
 		<div className='container'>
 			<Slider width={800}>
 				{team.map(user => (
-					<Card
-						key={user.id}
-						name={user.name}
-						image={user.photo}
-						qual={user.qualities}
-						id={user.id}
-					/>
+					<SliderItem key={user.id}>
+						<Card
+							name={user.name}
+							image={user.photo}
+							qual={user.qualities}
+							id={user.id}
+						/>
+					</SliderItem>
 				))}
 			</Slider>
 		</div>

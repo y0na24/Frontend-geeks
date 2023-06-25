@@ -31,7 +31,7 @@
 	padding: 10px;
 }
 
-.avatar-image{
+.avatar-image {
 	object-fit: cover;
 }
 
@@ -105,5 +105,15 @@
 	to {
 		margin-left: 0px;
 		opacity: 1;
+	}
+}
+
+@media (max-width: 645px) {
+	#card .personal {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		flex-direction: column;
 	}
 }
