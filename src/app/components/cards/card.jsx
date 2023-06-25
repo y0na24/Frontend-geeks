@@ -18,7 +18,7 @@ const Card = ({ name, image, qual, id, style }) => {
 						<h1>{name}</h1>
 						<h2>Frontend developer</h2>
 					</div>
-					<Badges arr={qual}/>
+					<Badges arr={qual} />
 				</div>
 			</div>
 			<Link to={`/teamMember/${id}`} className='randomizeButton'>
