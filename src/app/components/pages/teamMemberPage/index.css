@@ -2,15 +2,16 @@
 	display: flex;
 	justify-content: center;
 	margin: 0 auto;
-	max-width: 739px;
+	max-width: 1000px;
 	padding: 0 15px;
 	color: var(--text-color-2);
 }
 
 .card {
 	background-color: var(--secondary-color);
-	padding: 32px;
+	padding: 35px 50px;
 	border-radius: 16px;
+	margin-bottom: 20px;
 }
 
 .card-top {
@@ -39,8 +40,13 @@
 
 .card-name {
 	font-weight: 600;
-	font-size: 48px;
-	line-height: 50px;
+	font-size: 45px;
+}
+
+.card-name-block {
+	display: flex;
+	align-items: center;
+	gap: 20px;
 }
 
 .card-age {
@@ -76,13 +82,36 @@
 	margin-bottom: 24px;
 }
 
+.card-progress {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.card-thingsDone-list {
+	list-style: inside;
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 40px;
+}
+
+.card-thingsDone-title {
+	font-weight: 600;
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+
+.card-task span {
+	position: relative;
+	left: -8px;
+}
+
 .card-footer {
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
 }
 
-@media (max-width: 735px) {
+@media (max-width: 750px) {
 	.card-top {
 		flex-direction: column;
 		justify-content: center;
@@ -111,18 +140,44 @@
 		font-size: 16px;
 		text-align: center;
 	}
+
+	.card-progress {
+		justify-content: center;
+		align-items: center;
+	}
+
+	.card-thingsDone-title {
+		font-size: 24px;
+		text-align: center;
+	}
+
+	.card-thingsDone-list {
+		list-style: none;
+		text-align: center;
+	}
 }
 
 @media (max-width: 500px) {
+	.card {
+		padding: 35px 40px;
+	}
 	.card-qualities {
 		flex-direction: column;
 		justify-content: center;
+	}
+	.card-name {
+		font-size: 26px;
+		line-height: 40px;
 	}
 }
 
 @media (max-width: 400px) {
 	.card-footer {
 		flex-direction: column;
-		gap: 15px;
+		align-items: center;
+		gap: 25px;
+	}
+	.card-description {
+		font-size: 14px;
 	}
 }

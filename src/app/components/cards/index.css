@@ -1,34 +1,40 @@
 #card {
-	font-family: 'Segoe UI';
 	border-radius: 5px;
 	overflow: hidden;
+	background-color: var(--secondary-color);
 	width: 100%;
-	padding: 15px 25px;
+	padding: 35px;
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
 		0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 #card .nameHolder h1 {
 	font-size: 30px;
-	margin-left: 20px;
 }
 
 #card .nameHolder h2 {
-	margin-left: 20px;
-
-	font-size: 15px;
-	color: grey;
+	color: var(--grey-color);
+	font-weight: 500;
+	font-size: 24px;
+	margin-bottom: 10px;
 }
 
 #card .personal {
 	display: flex;
 	justify-content: center;
+	gap: 10px;
+	margin-bottom: 40px;
 }
 
 #card .avatar {
 	display: flex;
 	padding: 10px;
 }
+
+.avatar-image{
+	object-fit: cover;
+}
+
 #card .avatar img {
 	border-radius: 40px;
 	width: 200px;
@@ -61,11 +67,13 @@
 }
 
 #card .randomizeButton {
+	margin: 0 auto;
 	display: block;
-	background-color: #64bc7f;
+	background-color: var(--accent-color-2);
 	text-decoration: none;
 	text-align: center;
-	margin: 0px -25px -15px -25px;
+	border-radius: 4px;
+	max-width: 400px;
 	line-height: 60px;
 	color: #fff;
 	font-weight: bold;
@@ -73,10 +81,11 @@
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
+	transition: all 0.3s;
 }
 
 #card .randomizeButton:hover {
-	background-color: #57aa70;
+	background-color: #0a6bff;
 }
 
 .cardsList-item {

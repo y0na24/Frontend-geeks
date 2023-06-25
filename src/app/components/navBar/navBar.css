@@ -22,8 +22,8 @@
 	display: inline-block;
 }
 
-.nav_links li:first-child{
-	margin-left: 15px;
+.nav_links li:first-child {
+	margin-left: 10px;
 }
 
 .nav_links li:last-child {
@@ -34,4 +34,24 @@
 
 .nav_links {
 	display: flex;
+}
+
+@media (max-width: 500px) {
+	.link {
+		font-size: 14px;
+	}
+	.link:last-child {
+		margin: 0;
+	}
+	.nav_links {
+		justify-content: center;
+		gap: 15px;
+	}
+	.nav_links li:last-child {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.nav_links li:first-child {
+		margin: 0;
+	}
 }

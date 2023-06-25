@@ -7,14 +7,14 @@ import './index.css'
 const FavoritesPage = () => {
 	const favorites = useSelector(favoritesListSelector())
 	return (
-	    <div className='container'>
-            {
-				favorites.length > 0
-                    ? <Cards cards={favorites}/>
-					: <h1 className='noFavoritesTxt'>У выс нет избранных</h1>
-			}
-		</div>)
+		<div className='container'>
+			{favorites.length > 0 ? (
+				<Cards cards={favorites} />
+			) : (
+				<h1 className='noFavoritesTxt'>У вас нет избранных</h1>
+			)}
+		</div>
+	)
 }
-
 
 export default FavoritesPage

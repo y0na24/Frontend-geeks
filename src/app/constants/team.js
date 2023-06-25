@@ -10,7 +10,12 @@ const team = [
 		photo: yura,
 		qualities: ['Целеустремлённость', 'Креативность'],
 		github: 'https://github.com/yucheg2',
-		tasksDone: "Сделал слайдер и страницу 'Избранное'",
+		tasksDone: ['Слайдер', 'Cтраница избранных', 'Badge'],
+		skills: [
+			{ name: 'HTML', percent: 50 },
+			{ name: 'CSS', percent: 70 },
+			{ name: 'JavaScript', percent: 40 },
+		],
 	},
 	{
 		id: 2,
@@ -21,8 +26,17 @@ const team = [
 		photo: matvey,
 		qualities: ['Дисциплинированность', 'Коммуникабельность'],
 		github: 'https://github.com/y0na24',
-		tasksDone:
-			'Сделал работу с Redux Toolkit, страницу участника и breadCrumbs',
+		tasksDone: [
+			'Redux Toolkit & LocalStorage',
+			'Страница участнка',
+			'BreadCrumbs',
+			'Дизайн проекта',
+		],
+		skills: [
+			{ name: 'HTML', percent: 50 },
+			{ name: 'CSS', percent: 70 },
+			{ name: 'JavaScript', percent: 40 },
+		],
 	},
 	{
 		id: 3,
@@ -33,7 +47,12 @@ const team = [
 			'Люблю учиться новому, ставить недостижимые цели и медленно, но упорно, шаг за шагом, достигать их',
 		qualities: ['Усидчивость', 'Обучаемость', 'Целеустремленность'],
 		github: 'https://github.com/asyakz',
-		tasksDone: 'Название и описание команды, роутинг приложения',
+		tasksDone: ['Роутинг', 'Название и описание команды', 'ProgressBar'],
+		skills: [
+			{ name: 'HTML', percent: 50 },
+			{ name: 'CSS', percent: 70 },
+			{ name: 'JavaScript', percent: 40 },
+		],
 	},
 	{
 		id: 4,
@@ -44,7 +63,12 @@ const team = [
 			'Целиком и полностью полагаюсь на жизненное кредо, которое гласит: Поставил цель - добился',
 		qualities: ['Веселый', 'Дерзкий', 'Уверенный'],
 		github: 'https://github.com/Anti6ot',
-		tasksDone: 'Навигационное меню, карточка участника и интро',
+		tasksDone: ['Навигационное меню', 'Карточка участника', 'Интро'],
+		skills: [
+			{ name: 'HTML', percent: 50 },
+			{ name: 'CSS', percent: 70 },
+			{ name: 'JavaScript', percent: 40 },
+		],
 	},
 ]
 

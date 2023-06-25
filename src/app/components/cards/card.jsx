@@ -10,7 +10,7 @@ const Card = ({ name, image, qual, id, style }) => {
 		<div id='card' style={style}>
 			<div className='personal'>
 				<div className='avatar'>
-					<img src={image} alt='user avatar' />
+					<img className='avatar-image' src={image} alt='user avatar' />
 				</div>
 
 				<div className='info'>

@@ -13,6 +13,7 @@ import { github } from '../../../assets'
 import './index.css'
 import { useParams } from 'react-router-dom'
 import Badges from '../../ui/badge/badges'
+import ProgressBar from '../../progressBar/progressBar'
 
 const TeamMemberPage = () => {
 	const dispatch = useDispatch()
@@ -55,23 +56,38 @@ const TeamMemberPage = () => {
 					<div className='card-info'>
 						<span className='card-name'>{memberById.name}</span>
 						<span className='card-age'>{memberById.age} лет</span>
-						<Badges arr={memberById.qualities}/>
+						<Badges arr={memberById.qualities} />
 					</div>
 				</div>
 				<div className='card-bottom'>
 					<p className='card-description'>{memberById.description}</p>
-					<div className='card-footer'>
-						<a href={memberById.github}>
-							<img src={github} alt='Гитхаб' />
-						</a>
 
-						<FavoriteButton
-							onAdd={addToFavorites}
-							onDelete={deleteFromFavorites}
-							isFavorite={isFavorite}
-							label='Добавить в избранное'
-						/>
+					<div className='card-progress'>
+						{memberById.skills.map(skill => (
+							<ProgressBar name={skill.name} percent={skill.percent} />
+						))}
 					</div>
+					<div className='card-thingsDone'>
+						<h3 className='card-thingsDone-title'>Что было сделано:</h3>
+						<ul className='card-thingsDone-list'>
+							{memberById.tasksDone.map(task => (
+								<li className='card-task'>
+									<span>{task}</span>
+								</li>
+							))}
+						</ul>
+					</div>
+				</div>
+				<div className='card-footer'>
+					<a href={memberById.github}>
+						<img src={github} alt='Гитхаб' />
+					</a>
+					<FavoriteButton
+						onAdd={addToFavorites}
+						onDelete={deleteFromFavorites}
+						isFavorite={isFavorite}
+						label='Добавить в избранное'
+					/>
 				</div>
 			</div>
 		</div>
