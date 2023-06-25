@@ -82,6 +82,7 @@
 	-moz-user-select: none;
 	-ms-user-select: none;
 	transition: all 0.3s;
+	border: 0;
 }
 
 #card .randomizeButton:hover {

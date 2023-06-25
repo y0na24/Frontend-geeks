@@ -1,11 +1,11 @@
 import React from 'react'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 import { NavLink } from 'react-router-dom'
 
 import './index.css'
+import AboutUsButton from '../ui/aboutUsButton/aboutUsButton'
 
-const NavBar = ({handleShow}) => {
-
+const NavBar = ({ handleShow }) => {
 	return (
 		<header className='header'>
 			<nav className='nav'>
@@ -21,9 +21,7 @@ const NavBar = ({handleShow}) => {
 						</NavLink>
 					</li>
 					<li>
-						<div className="navbar-info" onClick={handleShow}>
-							О команде
-						</div>
+						<AboutUsButton handleShow={handleShow} />
 					</li>
 				</ul>
 			</nav>
@@ -32,7 +30,7 @@ const NavBar = ({handleShow}) => {
 }
 
 NavBar.propTypes = {
-	handleShow: PropTypes.func
+	handleShow: PropTypes.func,
 }
 
 export default NavBar

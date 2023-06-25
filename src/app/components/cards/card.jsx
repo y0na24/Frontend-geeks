@@ -4,14 +4,15 @@ import { useLocation, useNavigate } from 'react-router-dom'
 
 import './index.css'
 import Badges from '../ui/badge/badges'
+import GoToMemberButton from '../ui/goToMemberButton/goToMemberButton'
 
 const Card = ({ name, image, qual, id, style }) => {
 	const location = useLocation()
 
-	const navigate =useNavigate()
+	const navigate = useNavigate()
 
 	const clickHandler = () => {
-		navigate(`/teamMember/${id}`,{state:location.pathname})
+		navigate(`/teamMember/${id}`, { state: location.pathname })
 	}
 	return (
 		<div id='card' style={style}>
@@ -28,9 +29,7 @@ const Card = ({ name, image, qual, id, style }) => {
 					<Badges arr={qual} />
 				</div>
 			</div>
-			<div onClick={clickHandler} className='randomizeButton'>
-				Перейти
-			</div>
+			<GoToMemberButton clickHandler={clickHandler} />
 		</div>
 	)
 }

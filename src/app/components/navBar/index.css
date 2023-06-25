@@ -39,7 +39,6 @@
 }
 
 @media (max-width: 500px) {
-	
 	.link {
 		font-size: 14px;
 	}
@@ -76,4 +75,10 @@
 	-moz-user-select: none;
 	-ms-user-select: none;
 	transition: all 0.3s;
+	margin-right: 10px;
+	border: 0;
+}
+
+.navbar-info:hover {
+	background-color: #0a6bff;
 }
