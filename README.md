@@ -2,7 +2,7 @@
 
 <p id="description">Introduction нашей команды!</p>
 
-  
+<p id="description">Demo: https://frontend-geeks.vercel.app/</p>
   
 <h2>🧐 Реализовали:</h2>
 
