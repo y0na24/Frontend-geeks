@@ -1,3 +1,6 @@
+.cd-intro-content{
+  padding: 0 15px;
+}
 .cd-intro-content h1,
 .cd-intro-content p,
 
@@ -79,4 +82,8 @@
     opacity: 1;
     transform: perspective(800px) rotateX(0);
   }
+}
+
+@media (max-width: 360px) {
+  
 }

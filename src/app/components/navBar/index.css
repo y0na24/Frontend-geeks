@@ -36,6 +36,7 @@
 .nav_links {
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
 }
 
 @media (max-width: 500px) {
@@ -77,8 +78,17 @@
 	transition: all 0.3s;
 	margin-right: 10px;
 	border: 0;
+
 }
 
 .navbar-info:hover {
 	background-color: #0a6bff;
+}
+
+@media (max-width: 360px) {
+	.navbar-info{
+		padding: 0 10px;
+		font-size: 14px;
+		margin: 0;
+	}
 }
